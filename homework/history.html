@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>历史搜索</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        #val{height:40px;width:150px;}
+        #val:focus{
+            outline:none;
+            border:1px solid yellow;
+        }
+        #add{height:35px;width:100px;}
+    </style>
+ 
+</head>
+<body>
+    <input type="search" placeholder="请输入查找的商品" id="val" >
+    <input type="button" id="add" value="搜索">
+    <br>
+    最近搜索
+    <br>
+    <input type="button" id="removeAll" value="清除所有历史记录">
+</body>
+<script>
+    document.body.gete
+    //添加历史数据
+    var value1 = document.getElementById('val');
+    var add = document.getElementById('add');
+    add.onclick = function(){
+        var i;
+        var a = 0;//0添加  1不添加
+        if(localStorage.length == 0){
+            localStorage.setItem(localStorage.length,value1.value);
+            insertNode(value1.value);
+        }
+        else{
+            for(i = 0; i < localStorage.length ; i++){
+                if(localStorage.getItem(i) == value1.value){
+                    a = 1;
+                }
+                else if(i == localStorage.length-1 && a == 0)//表示比较了一遍，并且没有重复的
+                {
+                    localStorage.setItem(localStorage.length,value1.value);
+                    insertNode(value1.value);
+                }
+            }
+        }
+    }
+    //清除所有历史记录
+    var removeAll = document.getElementById('removeAll');
+    removeAll.onclick = function(){
+        localStorage.clear();
+        var y = document.getElementsByTagName('mark');
+        for(var f = y.length-1;f >= 0;f--){
+            document.body.removeChild(y[f]);
+        }
+    }
+    
+    function insertNode(any){
+        var elementnode = document.createElement('mark');
+        var context = document.createTextNode(any);
+        elementnode.style.marginLeft = 8 + 'px';
+        // elementnode.className = 'fxy';
+        elementnode.appendChild(context);
+        document.body.appendChild(elementnode);
+
+
+    }
+    window.onload = function (){
+        for(var a = 0;a < localStorage.length;a++){
+            var anthony = localStorage.getItem(a);
+            insertNode(anthony);
+        }
+    }
+
+</script>
+<ml>
