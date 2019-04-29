@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #tay{
+            background-image: url(a.jpg);
+            background-repeat: no-repeat;
+            width: 650px;
+            height: 400px;
+            position: relative;
+        }
+        #lor{
+            position: absolute; 
+            height: 400px;
+            width: 650px;   
+            top:0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="tay"></div>
+    <canvas width="650px" height="400px" id="lor"></canvas>
+</body>
+    <script>
+        //前期准备，绘制canvas大小
+        var lor = document.getElementById('lor');
+        var ctx = lor.getContext('2d');
+        ctx.beginPath();
+        ctx.rect(0,0,799,411);
+        ctx.fillStyle = 'gray';
+        ctx.fill();
+        ctx.closePath();
+        //根据destination-out 属性，鼠标每移动一下 就画出一个透明圆形 
+        lor.addEventListener('mousemove',function(event){
+            var xy = lor.getBoundingClientRect();//获取鼠标的坐标画圆
+            var x = event.clientX - xy.left;
+            var y = event.clientY - xy.top;
+
+            ctx.beginPath();
+            ctx.arc(x*(lor.width/xy.width),y*(lor.height/xy.height),40,0,2*Math.PI);
+            ctx.globalCompositeOperation = 'destination-out';
+            ctx.fillStyle = 'red';
+            ctx.fill();
+            ctx.closePath();
+            abc(ctx);
+            //console.log();
+            //console.log(X,Y);
+        })
+        console.log(window.devicePixelRatio);
+        function abc(n){
+            // var img=n.createImageData(650,400);
+            var img2=n.getImageData(0,0,650,400);
+            var arr1=img2.data;
+            var t=0;
+            for(var i=3;i<arr1.length;i+=4){
+                if(arr1[i]==0)
+                t++;
+            }
+            var per=(t)/260000;
+            if(per>=0.8){
+                n.clearRect(0,0,650,400);
+            }
+            //console.log(per);
+        }
+    </script>
+</html>
