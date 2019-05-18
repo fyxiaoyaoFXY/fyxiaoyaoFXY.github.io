@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>风中有朵雨做的云</title>
+    <style>
+        #div1{
+            position: relative;
+            width:620px;
+            height:580px;
+            background-color:purple;
+            margin:0 auto;
+            box-shadow:0px 0px 20px purple;  
+            border-radius:25px;
+            overflow: hidden;
+            transition:border-radius 1s linear;
+            transition:box-shadow 1s linear;
+        
+        }
+        #div1:hover{
+            border-radius: 0%;
+            box-shadow: 0px 0px 20px black;
+            transition:border-radius 1s linear;
+            transition:box-shadow 1s linear;
+        }
+        #div2{
+            border-radius:25px;
+            padding-top:30px;
+            transition:border-radius 1s linear;
+
+        }
+        #div2:hover{
+            border-radius: 0%;
+            transition:border-radius 1s linear;
+        }
+        img{
+            width:620px;
+            filter:brightness(100%) blur(0px);
+            transition: all 1s linear;
+        }
+        #div1:hover img{
+            right:200px;
+            width:680px;
+            margin-left:-20px;
+            filter:brightness(60%) blur(3px);
+            transition: all 1s linear;
+        }
+        #div3{
+            position: absolute;;
+            top:345px;
+            height:310px;
+            background-color:black;
+            transition:all 1s linear;
+        }
+        #div1:hover #div3{
+            margin-top:-120px;
+            z-index:100;
+            transition:all 1s linear;
+            
+        } 
+        #div3 p{
+            color:white;
+            font-size:25px;
+            font-weight:bold;
+            font-family:宋体;
+        }
+        #div5{
+            position:absolute;
+            top:530px;
+            width: 100%;
+            height:50px;
+            background-color:black;
+            font-size:25px;
+            font-weight:bold;
+            margin-bottom: 300px;
+            z-index:999;
+        }
+        #div5 p{
+            margin-top:5px;
+            color:white;
+        }
+        #div6{
+            position:absolute;
+            top:0px;
+            background-color:cornflowerblue;
+            left:520px;
+            border-radius:30px;
+            width:30px;
+            height:30px;
+            font-weight:bold;
+        }
+        #div7{
+            position:absolute;
+            top:0px;
+            background-color:cornflowerblue;
+            left:550px;
+            border-radius:30px;
+            width:30px;
+            height:30px;
+            z-index:1000;
+            font-weight: bold;
+        }
+        #egg{
+            color: white;
+            font-family: 宋体;
+            font-size:18px;
+			width:30px;
+			height:40px;
+			background:brown;
+			border-radius: 15px/25px 25px 15px 15px;
+            position:absolute;
+            top:305px;
+            transition:all 1s linear;
+		}
+        #div1:hover #egg{
+            margin-top:-120px;
+            transition:all 1s linear;
+            
+        } 
+        #egg1{
+            color: white;
+            font-family: 宋体;
+            font-size:18px;
+			width:30px;
+			height:40px;
+			background:brown;
+			border-radius: 15px/25px 25px 15px 15px;
+            position:absolute;
+            top:305px;
+            left:570px;
+            transition:all 1s linear;
+		}
+        #div1:hover #egg1{
+            margin-top:-120px;
+            transition:all 1s linear;
+            
+        } 
+
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2">
+            <img src="actor.jpg" >
+        </div>
+        <div id="div3">
+            <p><span style="color: cornflowerblue;font-size:35px;">风中有朵雨做的云</span></p>
+            <p>导演：娄烨
+                    (又名: 地狱恋人 / 地狱情人 / 风雨云 / Hell Lover / Cloud in the Wind / The Shadow Play)
+            </p>
+            <p>
+                <span style="font-size:15px;line-height:10px;"> 娄烨说：“我想表达的所有态度，在影片中已经非常清楚的呈现了，包括影片所有的删改痕迹，这都是我希望观众了解到的。”</span>
+            </p>
+        </div>
+        <div id="div5">
+            <p>写短评 |写影评 |提问题 |分享到</p>
+        </div>
+        <div id="div6"> &nbsp;&nbsp;娄</div>
+        <div id="div7">  &nbsp;&nbsp;烨</div>
+        <div id="egg"><p style="padding-bottom:15px;padding-left:5px;">介</p></div>
+        <div id="egg1"><p style="padding-bottom:15px;padding-left:5px;">绍</p></div>
+    </div>
+</body>
+</html>
