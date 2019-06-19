@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>英华逸游</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">	
+  <link rel="stylesheet" href="css/bootstrap.min.css">	
+  <style>
+    .big{
+      background:#dddddd;
+    }
+    .container{
+      width:100%;
+
+    }
+    .two{
+      background:#14316d;
+    }
+    h1{
+      letter-spacing: 20px;
+    }
+    .input-group{
+    border: 7px solid rgba(0,0,0,0.5);
+    border-radius: 10px;
+    }
+    .input-group-addon:first-child{
+    border-radius: 10px 0px 0px 10px; 
+    width:80px;
+    }
+    .input-group-addon:last-child{
+    border-radius: 0px 10px 10px 0px;
+    width:80px;
+    }
+    @media screen and (min-width:100px) and (max-width:900px){
+      .anniu{
+        display: none;
+      }
+      #dangerBtn{
+        position: absolute;
+        display: block;
+        top: 15px;
+        right: 70px;
+    }
+    #car{
+        display: none;
+    }
+
+    #bus{
+        margin-top: 10px;
+        width: 100%;
+        background-color:white;
+        height: 200px;
+    }
+    #bus button{
+        border-radius: 5px;
+        border:1px solid grey;
+        background-color: white;
+        width: 100px;
+        height: 30px;
+        margin-top: 30px;
+    }
+    #buleCar{
+        display: none;
+    }
+    #car{
+        display: none;
+    }
+    #SmBuleCar{
+        text-align: center;
+        margin-top: 50px;
+    }
+    #way{
+      text-align: center;
+    }
+    .Title{
+    text-align: left;
+    border-left: 4px solid orange;
+    height: 50px;
+    line-height: 50px;
+    
+   }
+   .change{
+     display:none;
+   }
+   #last{
+        background-color: black;
+        margin-top: 300px;
+    }
+    #last h4{
+        font-size: 20px;
+        line-height: 40px;
+    }
+    #last p{
+        color: #000;
+    }
+    .font{
+        text-align: left;
+        line-height: 25px;
+        margin-top: 20px;
+    }
+    .serice{
+        color: black;
+        opacity: 0.8;
+        text-align: center;
+        height: 200px;
+      }
+    .title1{
+      display: none;
+      }
+    .populor{
+      display:none;
+      }
+    .picture3{
+      display: none;
+    }
+    .smlast{
+      color:white;
+      background: #343235;
+      width:100%;
+    }
+    .smlast p{
+      color:white;
+    }
+    .light{
+      display:none;
+      }
+    .lastp{
+      display: none;
+    }
+    }
+    @media screen and (min-width:900px) and (max-width:1920px){
+      .bgNone{
+        display: none;
+      }
+      .input-group{
+        width: 600px;
+        position: relative;
+        bottom:70px;
+        left: 25%;
+    }
+    .input-group::placeholder{
+        font-size: 25px;
+    }
+    #dangerBtn{
+        display: none;
+    }
+      #car{
+        height:365px;
+      }
+      #car1{
+        background:url(img/Sbanner2.jpg) no-repeat;
+        height:365px;
+      }
+      #car2{
+        background:#14316d;
+        height:365px;
+      }
+      #car3{
+        position: relative;
+        left:30%;
+        top:10%;
+      }
+      #car4{
+        position: relative;
+        color:white;
+        font-size:30px;
+        left:30%;
+        top:20%;
+      }
+      #car5{
+        position:relative;
+        left:30%;
+        top:30%;
+      }
+      #car6{
+        background:#14316d;
+        height:50px;
+        font-size:20px;
+      }
+      #lan1{
+        height:400px;
+        background-color: #1c5080;
+
+      }
+      #lan1 img{
+        position: relative;
+        top:10%;
+        left:20%;
+      }
+
+      #daohang li{
+        font-size: 18px;
+        width: 105px;
+        height: 50px;
+        margin-top: -15px;
+        text-align: center;
+        border-radius: 10px;
+      }
+      #daohang{
+        position: relative;
+        left:200px;
+      }
+      #bus{
+        width: 100%;
+        margin-top: -50px;
+    }
+    #buleCar{
+        background-color: #19386e;
+        height: 365px;
+        text-align: center;
+        width:200px;
+    }
+    #buleCar img{
+        margin-top: 60px;
+    }
+    #buleCar h3{
+        margin-top: 20px;
+    }
+    #car{
+        margin-left: 10%;
+        background: url(img/Sbanner2.jpg) no-repeat;
+        height:400px;
+    }
+    .carSpan{
+        float:right;
+    }
+    #SmBuleCar{
+        display: none;
+    }
+    .title1{
+        display: none;
+    }
+    .pinzhi{
+        background-color: #19386e;
+        height: 400px;
+        text-align: center;
+    }
+    .blackDiv{
+        background-color: rgba(0,0,0,0.7);
+        height:95px;
+        margin-top: -95px;
+        text-align: center;
+        line-height: 70px;
+    } 
+    .pinzhi p{
+        width: 130px;
+        position: relative;
+        left: 32%;
+        line-height: 30px;
+        top: 10%;
+
+    }
+    #last{
+        height: 600px;
+        background-color: black;
+        margin-top: 300px;
+    }
+    #last p,h1,h2,h3,h4,h5{
+        color: aliceblue;
+    }
+    #last li,ul{
+        list-style: none;
+        float: left;
+    }
+    .serice{
+        background-color: #19386e;
+        opacity: 0.8;
+        text-align: center;
+        color: aliceblue;
+        padding: 0 0 10% 0;
+        height:345px;
+      
+      }
+      #smyj{
+        text-align: center;
+        color:black;
+      }
+      .backgroundImg{
+        background: url(img/rorate.png) no-repeat center;
+        height: 190px;
+    }
+      .backgroundImg img{
+        margin-left: 40%;
+        margin-top: 10%;
+      }
+      .smlast{
+        display: none;
+        }
+    .xiaoping{
+      display:none;
+    }
+    /* .change ul:first-child{
+      font-size:20px;
+      font-weight:bold;
+    } */
+    .change ul{
+      margin-top:30px;
+    }
+    .change li{
+      margin-top:10px;
+      color: white;
+      margin-left:15px;
+    }
+    .light{
+      position: relative;
+      top:10%;
+    }
+    .lastp{
+      text-align: center;
+      position: relative;
+      top:20%;
+    }
+    }
+  </style>
+</head>
+<body data-spy="scroll" data-target="#myNav">
+    <div class="big">
+        <div class="container">    
+            <div style="background:black;height:30px;">
+                <nav  class="navbar navbar-default navbar-fixed-top" id="myNav">
+                  <nav  class="navbar navbar-inverse ">
+                    <div class="collapse navbar-collapse" id="bs-1"  style="position:absolute;;right:50px;color:white;">
+                      <ul class="nav navbar-nav">
+                        <li>
+                            <img src="img/tell.png" style="position: relative;top:10px;">
+                        </li>
+                        <li style="position: relative;top:13px;">
+                          400-808-8682
+                        </li>
+                        <li>
+                          <a href="#">登录</a>
+                        </li>
+                        <li>
+                          <a href="#">注册</a>
+                        </li>
+                    </div>
+    
+                  </nav>
+                    <div class="navbar-header">
+                        <img src="img/logo.png" style="position: relative;left:115px;bottom:10px;">
+                      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#bs-1">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <button type="button" class="btn btn-xs btn-danger" id="dangerBtn">快速定制</button>
+                      <!-- <a class="active" href="#">首页</a> -->
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-1">
+                      <ul id="daohang" class="nav navbar-nav">
+                        <li>
+                            <a class="active" href="#">首页</a>
+                        </li>
+                        <li>
+                          <a href="#rmxl">热门路线</a>
+                        </li>
+                        <li>
+                          <a href="#qztj">签证推荐</a>
+                        </li>
+                        <li>
+                          <a href="#smyj">使命愿景</a>
+                        </li>
+                    </div>
+                  </nav>
+            </div>
+            <br>
+            <br>
+            <br>
+            
+            <div id="generic" class="carousel slide" data-ride="carousel">
+               <!-- 轮播（Carousel）项目 -->
+              <div class="carousel-inner" >
+                <div class="item active">
+                  <img alt="First slide" src="img/banner.jpg" class="img-responsive" >
+                </div>
+                <div class="item">
+                  <img alt="Second slide" src="img/banner2.jpg" class="img-responsive" >
+                </div>
+              </div>
+              <!-- 轮播（Carousel）导航 -->
+              <a class="left carousel-control" href="#generic" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#generic" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+              <div class="input-group">
+                  <span class="input-group-addon btn glyphicon glyphicon-map-marker">目的地</span>
+                  <input type="search" class="form-control" placeholder="|  日本  美国  英国  地中海">
+                  <span class="input-group-addon btn  glyphicon glyphicon-search" style="background-color: #cb5405"></span>
+              </div>
+            </div>
+            <br>
+            <br>
+            <div id="bus" class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-7" id="car">
+                        <span class="carSpan">
+                            <h3>机场接送 省钱省心</h3>
+                            <p>提供上海、苏州、无锡各市</p>
+                            <p>往返机场、码头接送服务,更有包车优惠</p>
+                        </span>
+                    </div>
+                    <div id="buleCar" class="col-md-4 col-sm-4">
+                        <div class="col-md-12 col-sm-12">
+                            <img src="img/car.png" width="849" height="400" class="img-responsive"></div>
+                        <div class="col-md-12 col-sm-12">
+                            <h3 class="col-md-12">车辆接送</h3></div>
+                        <div class="col-md-12 col-sm-12">
+                            <button>查看详情</button></div>
+                    </div>
+                    <div id="SmBuleCar" class="col-sm-12">
+                        <div class="col-sm-3 col-xs-3">
+                            <img src="img/carH.png" alt="" width="849" height="400" class="img-responsive">
+                        </div>
+                        <div class="col-sm-6 col-xs-6">
+                            <span class="carSpan">
+                                <h3 style="color:cornflowerblue">机场接送 省钱省心</h3>
+                                <p style="color:cornflowerblue">提供上海、苏州、无锡各市</p></span>
+                        </div>
+                        <div class="col-sm-3 col-xs-3">
+                            <button>查看详情</button></div>
+                    </div>
+                </div>
+          </div>
+              </div>
+            <br>
+            <div class="container img-responsive" id="wei"> 
+                <h1 id="rmxl" align="center" class="Title" style="color: black;">热门线路</h1>
+                <h1 class="title1">热门线路</h1>
+                <h4 align="center" style="color: black" class="populor">Populor tourist routes</h4>
+              <div class="row img-responsive">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <div class="col-md-12" style="background:url(img/hot1.jpg) no-repeat;height:385px;"></div>
+                  <div class="col-md-12" style="height:105px;background-color:black;opacity:1;">
+                    <div class="col-md-12" style="color:white">
+                      <h4>海南三亚5天4晚，纯玩，4晚红树林度假王国</h4>
+                      <h2>￥2580 <span style="font-size:20px;">/人起</span></h2>
+                    </div>
+                  </div>
+                  <div class="col-md-12" style="background:url(img/hot2.jpg) no-repeat;height:438px;"></div>  
+                  <div class="col-md-12" style="height:80px;background-color:black;opacity:1;">
+                    <div class="col-md-12" style="color:white">
+                      <h4>德法意瑞欧洲四国，ABCD任意线路由您挑选</h4>
+                      <h2>￥7999 <span style="font-size:20px;">/人起</span></h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 picture3">
+                  <div class="col-md-12" style="background:url(img/hot3.jpg) no-repeat;height:290px;position: relative;">
+                    <div class="col-md-12" style="position:absolute;bottom:0px;left:0px;height:85px;background-color:rgba(0, 0, 0, 0.3) ;width:585px;">
+                      <div class="col-md-12" style="color:white">
+                        <h4>曼谷+芭提雅 国际五星，赠送2200大礼包，绝无自费</h4>
+                        <h2>￥2799 <span style="font-size:20px;">/人起</span></h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 picture3" style="background:url(img/hot4.jpg) no-repeat;height:355px;position: relative;">
+                    <div class="col-md-12" style="position:absolute;bottom:0px;left:0px;height:85px;background-color:rgba(0, 0, 0, 0.3) ;width:585px;">
+                      <div class="col-md-12" style="color:white">
+                        <h4>日本本州游 樱花、寿司、温泉、美食</h4>
+                        <h2>￥5399 <span style="font-size:20px;">/人起</span></h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 picture3" style="background:url(img/hot5.jpg) no-repeat;height:360px;position: relative;">
+                    <div class="col-md-12" style="position:absolute;bottom:0px;left:0px;height:85px;background-color:rgba(0, 0, 0, 0.3) ;width:585px;">
+                      <div class="col-md-12" style="color:white">
+                        <h4>斯里兰卡7天6晚全景游 保证入住2晚香格里拉</h4>
+                        <h2>￥7999 <span style="font-size:20px;">/人起</span></h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <br>
+            <div class="container img-responsive"> 
+              <h1 id="qztj" align="center" class="Title" style="color:black">签证推荐</h1>
+              <h1 class="title1">签证推荐</h1>
+              <h4 align="center" style="color:black" class="populor">Visa recommendation</h4>
+              <br>
+              <br>
+              <div class="col-md-4 col-xs-6 col-sm-6" style="background:url(img/visa1.jpg) no-repeat;height:555px;position: relative;">
+                <div class="col-md-12" style="position:absolute;bottom:0px;left:0px;height:70px;background-color:rgba(0, 0, 0, 0.3) ;width:400px;">
+                  <div class="col-md-12" style="color:white">
+                    <h4>日本旅游签证 ￥ <span style="font-size:30px;">420</span>/人</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-xs-6 col-sm-6">
+                  <div class="col-md-12" style="background:url(img/visa2.jpg) no-repeat;height:275px;position: relative;">
+                    <div class="col-md-12" style="position:absolute;bottom:0px;left:0px;height:70px;background-color:rgba(0, 0, 0, 0.3) ;width:370px;">
+                      <div class="col-md-12" style="color:white">
+                        <h4>新加坡签证 ￥ <span style="font-size:30px;">370</span>/人</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12" style="background:url(img/visa3.jpg) no-repeat;height:275px;position: relative;">
+                    <div class="col-md-12" style="position:absolute;bottom:0px;left:0px;height:70px;background-color:rgba(0, 0, 0, 0.3) ;width:370px;">
+                      <div class="col-md-12" style="color:white">
+                        <h4>申根旅游签证 ￥ <span style="font-size:30px;">999</span>/人</h4>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-4 picture3">
+                  <div class="col-md-12" style="background:url(img/visa4.jpg) no-repeat;height:275px;position: relative;">
+                    <div class="col-md-12" style="position:absolute;bottom:0px;left:0px;height:70px;background-color:rgba(0, 0, 0, 0.3) ;width:370px;">
+                      <div class="col-md-12" style="color:white">
+                        <h4>马来西亚旅游签证 ￥ <span style="font-size:30px;">450</span>/人</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 picture3" style="background:url(img/visa5.jpg) no-repeat;height:275px;position: relative;">
+                    <div class="col-md-12" style="position:absolute;bottom:0px;left:0px;height:70px;background-color:rgba(0, 0, 0, 0.3) ;width:370px;">
+                      <div class="col-md-12" style="color:white">
+                        <h4>美国旅游签证 ￥ <span style="font-size:30px;">1380</span>/人</h4>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="container" style="position:relative;height:100px;">
+                <button type="button" class="btn anniu" style="position:absolute;left:500px;bottom:0px;width:180px;border-color:black;font-size:20px;">
+                  查看更多 ></button>
+                  <button type="button" class="xiaoping" style="position:absolute;left:250px;bottom:30px;width:150px;border-color:black;font-size:20px;">
+                      查看更多 ></button>
+            </div>
+            <br>
+            <br>
+        </div> 
+        <div style="width:100%;">
+            <img src="img/Bbanner.jpg"class="img-responsive" >
+        </div>
+        <div class="continer col-md-12" style="background: url(img/back.png) no-repeat;height:1000px;">
+          <hr>
+          <div class="col-md-12 row" id="smyj">
+              <span>
+                  <h2 style="color: black">使命与愿景</h2>
+                  <p style="color:black;">让旅游回归本质，体验纯粹旅游</p>
+              </span>
+          </div>
+          <hr>
+              <div class="col-md-5 col-xs-12 col-sm-12">
+                  <img src="img/mission1.jpg"  width="1200" height="472" class="img-responsive">
+              </div>
+              
+              <div  class="col-md-7 col-sm-12 col-xs-12 serice">
+                  <span style="margin-top:40px;" class="col-md-12">
+                      <h3>服务理念及优势</h3>
+                      <p class="col-md-10 col-xs-12">“英华逸游”通过重新打造旅游全程中的产品线路设计、出行交通方案、陪游向导服务、增值关怀项目等，
+                      为客户提供高品质的旅游体验。英华逸游在泰国、欧洲、等多个国家拥有丰富的旅游资源，同时致力于给用户提供性价比高的产品和服务。</p></span>
+              </div>
+          <div class="col-md-12 col-xs-12 col-sm-12">
+              <img src="img/mission2.jpg" width="1200" height="472" class="img-responsive">
+          </div>
+          <div class="change">
+              <div class="col-md-4 col-xs-4 pinzhi">
+                  <div class="backgroundImg col-sm-12">
+                      <img src="img/icon1.png" alt="" width="51" height="69" class="img-responsive">
+                      <h3 style="color: white;">品质行程</h3>
+                  </div>
+                  <p class="text-center" style="color: white;">旅游达人精心设计、基于口碑反复打磨，
+                          全网最好，敢跟任何产品比</p>
+              </div>
+              <div class="col-md-4 col-xs-4 pinzhi">
+                  <div class="backgroundImg col-sm-12">
+                      <img src="img/icon2.png" alt="" width="51" height="69" class="img-responsive">
+                      <h3 style="color: white;">品质消费</h3>
+                  </div>
+                  <p class="text-center" style="color: white;">不推自费，
+                          不进垃圾购物店和伪景点</p>
+              </div>
+              <div class="col-md-4 col-xs-4 pinzhi">
+                  <div class="backgroundImg col-sm-12">
+                          <img src="img/icon3.png" alt="" width="51" height="69" class="img-responsive">
+                          <h3 style="color: white;">品质小团</h3>
+                  </div>
+                  <p class="text-center" style="color: white;">独立成团不散拼，
+                          只跟亲朋好友一起玩，每天发团 
+                  </p>
+              </div>
+          </div>
+          <hr>
+          <div class="bgNone">
+              <div class="col-sm-12 col-xs-12 text-center"><h3>--服务优势--</h3></div>
+              <hr>
+              <div class="col-sm-12 col-xs-12 whiteDiv font">
+                  <div class="col-sm-4 col-xs-4">
+                      <img src="img/icon11.png" alt="" width="60" height="55" class="img-responsive">
+                  </div>
+                  <div>
+                      <p >旅游达人精心设计、基于口碑反复打磨，
+                              告别人山人海鸡肋景点。
+                              全网最好，敢跟任何产品比</p>
+                  </div>
+              </div>
+              <hr>
+              <div class="col-sm-12 col-xs-12 whiteDiv down font">
+                      <div class="col-sm-4 col-xs-4">
+                              <img src="img/icon22.png" alt="" width="60" height="55" class="img-responsive">
+                          </div>
+                      <div>
+                          <p >不推自费，
+                                  不进垃圾购物店和伪景点</p>
+                      </div>
+              </div>
+              <hr>
+              <div class="col-sm-12 col-xs-12 whiteDiv down font">
+                      <div class="col-sm-4 col-xs-4">
+                              <img src="img/icon33.png" alt="" width="60" height="55" class="img-responsive">
+                      </div>
+                      <div>
+                          <p >
+                              独立成团不散拼，
+                              只跟亲朋好友一起玩，每天发团 
+                          </p>
+                      </div>
+              </div>
+              <hr>
+          </div>
+      </div>
+      <div class="col-md-12" id="last">
+          <div class="col-md-12 change ">
+              <ul>
+                  <li style="font-size:20px;font-weight:bold;">合作伙伴</li>
+                  <li>携程网</li>
+                  <li>阿里飞猪</li>
+                  <li>去哪儿</li>
+                  <li>苏州旅游局</li>
+              </ul>
+          </div>
+          <div class="col-md-12 change">
+                  <ul>
+                      <li style="font-size:20px;font-weight:bold;">热门位置</li>
+                      <li>韩国</li>
+                      <li>日本</li>
+                      <li>菲律宾<li>
+                      <li>越南</li>
+                      <li>老挝</li>
+                      <li>柬埔寨</li>
+                      <li>泰国</li>
+                      <li>马来西亚</li>
+                      <li>新加坡</li>
+                      <li>印度尼西亚</li>
+                      <li>印度</li>
+                      <li>斯里兰卡</li>
+                      <li>土耳其</li>
+                      <li>阿联酋</li>
+                      <li>西班牙</li>
+                      <li>意大利</li>
+                      <li>希腊</li>
+                      <li>法国</li>
+                      <li>比利时</li>
+                      <li>荷兰</li>
+                      <li>英国</li>
+                      <li>瑞士</li>
+                      <li>奥地利</li>
+                      <li>德国</li>
+                      <li>匈牙利</li>
+                      <li>俄罗斯</li>
+                      <li>捷克</li>
+                      <li>芬兰</li>
+                      <li>葡萄牙</li>
+                      <li>冰岛</li>
+                      <li>美国</li>
+                      <li>加拿大</li>
+                      <li>巴西</li>
+                      <li>阿根廷</li>
+                      <li>澳大利亚</li>
+                      <li>新西兰</li>
+                      
+                  </ul>
+          </div>
+          <div class="col-md-12 change">
+            <ul>
+                <li style="font-size:20px;font-weight:bold;">主题服务</li>
+                <li>海岛度假</li>
+                <li>历史文化</li>
+                <li>探索冒险</li>
+                <li>美食购物</li>
+                <li>都市生活</li>
+                <li>海外游学</li>
+                <li>邮轮度假</li>
+                <li>蜜月摄影</li>
+                <li>亲子乐园</li>
+            </ul>
+          </div>
+          <div class="col-md-12 change">
+            <ul>
+                <li style="font-size:20px;font-weight:bold;">友情链接</li>
+                <li>马蜂窝</li>
+                <li>穷游</li>
+                <li>booking</li>
+                <li>苏州旅游局</li>
+                <li>驴友网</li>
+                <li>吾爱全球签证中心</li>
+                <li>酒店团购</li>
+                <li>携程旅游攻略</li>
+                <li>天巡职航在线</li>
+                <li>满天飞旅游网</li>
+                <li>中国旅游网</li>
+                <li>澳乐网</li>
+                <li>背包兔旅游行程</li>
+                <li>出境旅游</li>
+                <li>国际酒店</li>
+                <li>广州旅行社</li>
+                <li>出境旅游</li>
+                <li>517旅游</li>
+                <li>花生旅游</li>
+                <li>家园网</li>
+                <li>海外婚礼</li>
+            </ul>
+          </div>
+          <hr style="height:1px;border:none;border-top:1px solid #555555;width:100%;" class="light"/>
+          <p class="lastp"> 苏ICP备14019690号、2014-2017 @苏州英华国际旅游有限公司 版权所有</p>
+          <div class="container col-md-12 text-center smlast" style="width:100%;">
+            <h4>苏ICP备14019690号、2014-2017</h4>
+            <p style="color:white;">@苏州英华国际旅游有限公司 版权所有</p>
+            <p style="color:white;">技术支持 杭州联橙科技</p>
+          </div>
+
+      </div>
+        </div>
+    </div>
+
+  <script src="js/jQuery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
